@@ -12,8 +12,8 @@
             "scale": 2.4422916666666663,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 239.52913076857462,
-                "y": 159.68608717904976
+                "x": 262.04896357587654,
+                "y": 158.4577326622878
             }
         }
     },
@@ -21,6 +21,7 @@
         "pixel adventure.tsx",
         "pixel.tmx"
     ],
+    "project": "",
     "recentFiles": [
         "pixel adventure.tsx",
         "pixel.tmx"

@@ -14,7 +14,22 @@ class Level extends World {
       Vector2.all(16),
     );
     add(level);
-    add(Player());
+    final spawnPointLayer = level.tileMap.getLayer<ObjectGroup>('SpawnPoints');
+
+    for (final spawnPoint in spawnPointLayer!.objects) {
+      switch (spawnPoint.class_) {
+        case 'Player':
+          final player = Player(
+              charecter: 'Mask Dude',
+              position: Vector2(spawnPoint.x, spawnPoint.y));
+          add(player);
+
+          break;
+        default:
+      }
+    }
+
+    // add(Player(charecter: 'Ninja Frog'));
 
     return super.onLoad();
   }
