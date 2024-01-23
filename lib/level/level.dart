@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flame/components.dart';
 import 'package:flame_tiled/flame_tiled.dart';
-import 'package:melancholy/actors/player.dart';
+import 'package:melancholy/components/player.dart';
 
 class Level extends World {
   late TiledComponent level;
@@ -20,8 +20,13 @@ class Level extends World {
       switch (spawnPoint.class_) {
         case 'Player':
           final player = Player(
-              charecter: 'Mask Dude',
-              position: Vector2(spawnPoint.x, spawnPoint.y));
+            charecter: 'Mask Dude',
+            position: Vector2(
+              spawnPoint.x,
+              spawnPoint.y,
+            ),
+          );
+
           add(player);
 
           break;

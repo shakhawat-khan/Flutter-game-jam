@@ -4,12 +4,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:melancholy/pixel_adventure.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   PixelAdventure game = PixelAdventure();
 
-  Flame.device.fullScreen();
-  Flame.device.setLandscape();
+  await Flame.device.fullScreen();
+  await Flame.device.setLandscape();
 
   runApp(
     GameWidget(
